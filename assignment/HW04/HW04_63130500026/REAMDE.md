@@ -18,6 +18,7 @@ Choosen Dataset:
 ```
 # Library
 library(tidyverse)
+library(ggplot2)
 
 # Dataset
 data <- read_csv("https://raw.githubusercontent.com/safesit23/INT214-Statistics/main/datasets/prog_book.csv")
