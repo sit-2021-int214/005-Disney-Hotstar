@@ -146,19 +146,24 @@ $ Price           <dbl> 203.1088, 212~
 There are 5 books which its price is greater than 200.
 
 ## Part 4: Visualization with GGplot2
-### 1.) Graph show relation between height and mass
-```
-scat_plot <- starwars %>% filter(mass<500) %>% ggplot(aes(x=height,y=mass))+
-  geom_point(aes(color=gender))
+### 1.) Graph shows relation between Rating and Price
 
-scat_plot+geom_smooth()
+```
+rating_plot <- ggplot(data,aes(x=Price,y=Rating)) + geom_point()
+rating_plot + ggtitle("Number of rating compared to price") + geom_point(aes(color = data$Type))
 ```
 Result:
 
-![Graph 1](graph1.png)
+![Graph shows relation between Rating and Price](Rplot01.png)
 
-**Guideline:
-Embed Image by using this syntax in markdown file
-````
-![Name](imageFile)
-````
+
+### 2.) Graph shows relation between Price and Frequency
+
+```
+review_plot <- data %>% filter(Reviews < 2000) %>% ggplot(aes(x=Price)) + geom_histogram(binwidth = 10, bins = 10)
+review_plot + ggtitle("Count of Price ") + ylab("Count")
+```
+
+Result:
+
+![Graph shows relation between Rating and Reviews](Rplot.png)
