@@ -100,6 +100,54 @@ Result:
 ```
 Book types have Paperback,Hardcover then it has pages more than 1000 pages
 
+### 3.4 find quantile3 of Rating this dataset
+```
+Com$Rating %>% quantile(0.75,na.rm = T)
+```
+Result:
+```
+ 75% 
+4.25
+```
+quantile 3 is 4.25
+
+### 3.5 Show title , rating and price of this dataset that have rating more than 4.5
+```
+Com %>% filter(Rating > 4.5) %>% select(Book_title,Rating ,Price)
+```
+Result:
+```
+ Book_title Rating     Price
+1                                           ZX Spectrum Games Code Club: Twenty fun games to code and learn   4.62  14.64118
+2                                                                                   Your First App: Node.js   5.00  25.85588
+3                       The Elements of Computing Systems: Building a Modern Computer from First Principles   4.54  41.25294
+4               Build Web Applications with Java: Learn every aspect to build web applications from scratch   4.67  42.27647
+5  Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems   4.72  45.56176
+6                             The Linux Programming Interface: A Linux and Unix System Programming Handbook   4.62  46.35882
+7                                                                  Practical Object Oriented Design in Ruby   4.54  50.09412
+8                                                  Fluent Python: Clear, Concise, and Effective Programming   4.67  64.09118
+9                                                                          CLR via C# (Developer Reference)   4.58  66.32059
+10                                                  The Art of Computer Programming, Volumes 1-4a Boxed Set   4.77 220.38529
+```
+All the Book title is rating more than 4.5
+
+### 3.6 Show the price that more than 45 and ordering by desc
+```
+Com %>% filter(Price > 150) %>% select(Price) %>% arrange(desc(Price))
+```
+Result:
+```
+Price
+1 235.6500
+2 220.3853
+3 220.3853
+4 212.0971
+5 203.1088
+6 176.1441
+```
+this is all of price more than 150
+
+
 
 ## Part 4: Visualization with GGplot2
 ### 4.1 plot graph show relation between Price and Number of Pages
