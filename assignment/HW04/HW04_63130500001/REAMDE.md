@@ -80,7 +80,7 @@ Com %>% ggplot(aes(x=Number_Of_Pages,y=Price))+geom_point(aes(color=Com$Price))
 ```
 Result:
 
-![Graph 1](Rplot01.pdf)
+![Graph 1](Rplot1.png)
 
 ### 4.2 plot graph histogram show Price
 ```
@@ -88,7 +88,7 @@ Com %>% ggplot(aes(x=Price))+geom_histogram(binwidth = 15)+ggtitle("Price")+xlab
 ```
 Result:
 
-![Graph 2](Rplot02.pdf)
+![Graph 2](Rplot2.png)
 **Guideline:
 Embed Image by using this syntax in markdown file
 ````
