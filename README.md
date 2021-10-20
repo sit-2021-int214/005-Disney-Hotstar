@@ -5,8 +5,9 @@ Datasets from: [Disney+ Hotstar](https://www.kaggle.com/sanjanaalaham/disney-hot
 
 ## Process
 0. Import datasets and libraries.
-1. Data Cleaning
-2. Define a question
+1. Define a question
+2. Data Cleaning
+
 
 
 ## Result
@@ -31,24 +32,49 @@ library(readr)
 library(stringr)
 ```
 
-#### 1. Data Cleaning 
+#### 1. Define questions
 
-##### 1.1 Change Every empty string in dataset to NA.
+1. How many series and movies in this dataset ?
+2. Find average runtime of movie
+3. 
+
+#### 2. Data Cleaning 
+
+##### 2.1 Change Every empty string in dataset to NA.
 ```
 data <- data %>% na_if(.,"") %>% na_if(.,"N/A")
 ```
 
-##### 1.2 Change type of type into factor
+##### 2.2 Change type of type into factor
 ```
 data$type <- data$type %>% as.factor()
 ```
-
-##### 1.3 Change typer of rated into factor
+##### 2.3 Change type of rated into factor
 ```
-data$rated <- data$rated %>% as.factor()
+data$rated <- data$rated %>% str_trim() %>% as.factor()
 ```
 
-##### 1.4 Delete extra character out and trim the space out, then change type to numeric and rename to "runtime (min)"
+##### 2.4 Change 'APPROVED' to 'Approved' in rated
+```
+data$rated <- data$rated %>% str_replace("APPROVED", "Approved")
+```
+
+##### 2.5 Change 'NOT RATED' to 'Not Rated' in rated
+```
+data$rated <- data$rated %>% str_replace("NOT RATED" , "Not Rated")
+```
+
+##### 2.6 Change 'PASSED' to 'Passed' in rated
+```
+data$rated <- data$rated %>% str_replace("PASSED" , "Passed")
+```
+
+##### 2.7 Change 'UNRATED' to 'Unrated' in rated
+```
+data$rated <- data$rated %>% str_replace("UNRATED" , "Unrated")
+```
+
+##### 2.8 Delete extra character out and trim the space out, then change type to numeric and rename to "runtime (min)"
 ```
 data$runtime <- data$runtime %>% str_remove("min") %>% str_trim() %>% as.numeric()
 names(data)[8] <- 'runtime_min'
