@@ -146,6 +146,30 @@ $ Price           <dbl> 203.1088, 212~
 
 There are 5 books which its price is greater than 200.
 
+### 3.6 List a book that has page greater than 300
+
+Use filter() to get a number of page that greater than 1500 anthe use glimpse() to display information.
+
+```
+data %>% filter(Number_Of_Pages > 1500) %>% glimpse()
+```
+
+Result:
+
+```
+Rows: 2
+Columns: 7
+$ Rating          <dbl> 4.62, 4.77
+$ Reviews         <dbl> 28, 4
+$ Book_title      <chr> "The Linux Programming Interface: A Linux and Unix Syste~
+$ Description     <chr> "The Linux Programming Interface is the definitive guide~
+$ Number_Of_Pages <dbl> 1506, 3168
+$ Type            <chr> "Hardcover", "Hardcover"
+$ Price           <dbl> 46.35882, 220.38529
+```
+
+There are 2 books that has a number of pages greater than 1500.
+
 ## Part 4: Visualization with GGplot2
 ### 1.) Graph shows relation between Rating and Price
 

@@ -29,6 +29,8 @@ data$Type %>% as.factor() %>% glimpse()
 ## 3.5 
 data %>% filter(Price > 200) %>% glimpse()
 
+## 3.6
+data %>% filter(Number_Of_Pages > 1500) %>% glimpse()
 
 ## 4
 
