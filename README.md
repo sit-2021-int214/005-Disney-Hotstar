@@ -38,10 +38,10 @@ library(stringr)
 2. Find average runtime of movie
 3. Name a movie that is directed by Anthony Russo and Joe Russo
 4. Find total, max, min, average of metascore.
-5. Find total, max, min, average of imdb_score.
-6. Find total, max, min, average of metascore.
-7. List a movie that is rated at PG-13.
-8. List a movie that has runtime greather than 100 minutes.
+5. Find total, max, min, average of imdb_vote.
+6. Find total, max, min, average of imdb_rating.
+7. List a film that is rated at PG-13.
+8. List a film that has runtime greather than 140 minutes.
 
 ## 2. Data Cleaning 
 
@@ -213,11 +213,165 @@ data$metascore %>% mean(.,na.rm = T)
 
 The average metascore is 62.06
 
-### Use 
-5. Find total, max, min, average of imdb_score.
-6. Find total, max, min, average of metascore.
-7. List a movie that is rated at PG-13.
-8. List a movie that has runtime greather than 100 minutes.
+## 7. Find total, max, min, average of imdb_vote.
+
+### 7.1 Use sum() to find a total
+```
+data$imdb_votes %>% sum(.,na.rm = T)
+```
+
+```
+[1] 89242
+```
+
+Total of imdb vote is 89242
+
+### 7.2 Use max() to find max
+```
+data$imdb_votes %>% max(.,na.rm = T)
+```
+
+```
+[1] 1173
+```
+
+The highest vote score is 1173
+
+### 7.3 Use min() to find min
+```
+data$imdb_votes %>% min(.,na.rm = T)
+```
+
+```
+[1] 5
+```
+
+The lowest imdb vote score is 5
+
+### 7.4 Use mean() to find average
+```
+data$imdb_votes %>% mean(.,na.rm = T)
+```
+
+```
+[1] 347.2451
+```
+
+The average imdb vote is 347.2451 
+
+## 8. Find total, max, min, average of imdb rating.
+
+### 8.1 Use sum() to find a total
+```
+data$imdb_rating %>% sum(.,na.rm = T)
+```
+
+```
+[1] 5851
+```
+
+Total of imdb rating is 5851
+
+### 8.2 Use max() to find max
+```
+data$imdb_rating %>% max(.,na.rm = T)
+```
+
+```
+[1] 9.7
+```
+
+The highest imdb rating is 9.7
+
+### 8.3 Use min() to find min
+```
+data$imdb_rating %>% min(.,na.rm = T)
+```
+
+```
+[1] 1.5
+```
+
+The lowest imdb rating is 1.5
+
+### 8.4 Use mean() to find average
+```
+data$imdb_rating %>% mean(.,na.rm = T)
+```
+
+```
+[1] 6.656428
+```
+
+The average imdb rating is 6.66
+
+
+## 9. List a film that is rated at PG-13.
+
+### 9.1 Use filter() to filter a PG-13 Rate then use glimpse() to display
+```
+data %>% filter(rated == "PG-13") %>% glimpse()
+```
+
+```
+Rows: 37
+Columns: 19
+$ imdb_id     <chr> "tt0147800", "tt0499549", "tt0118998"~
+$ title       <chr> "10 Things I Hate About You", "Avatar~
+$ plot        <chr> "A pretty, popular teenager can't go ~
+$ type        <fct> movie, movie, movie, movie, movie, mo~
+$ rated       <chr> "PG-13", "PG-13", "PG-13", "PG-13", "~
+$ year        <chr> "1999", "2009", "1998", "2018", "1996~
+$ released_at <chr> "31 Mar 1999", "18 Dec 2009", "26 Jun~
+$ added_at    <chr> "November 12, 2019", "November 12, 20~
+$ runtime_min <dbl> 97, 162, 85, 100, 113, 132, 117, 141,~
+$ genre       <chr> "Comedy, Drama, Romance", "Action, Ad~
+$ director    <chr> "Gil Junger", "James Cameron", "Betty~
+$ writer      <chr> "Karen McCullah, Kirsten Smith", "Jam~
+$ actors      <chr> "Heath Ledger, Julia Stiles, Joseph G~
+$ language    <chr> "English, French", "English, Spanish"~
+$ country     <chr> "USA", "USA", "USA", "USA", "USA", "U~
+$ awards      <chr> "2 wins & 13 nominations.", "Won 3 Os~
+$ metascore   <dbl> 70, 83, 46, 83, 31, 51, 64, 66, 78, 8~
+$ imdb_rating <dbl> 7.3, 7.8, 5.4, 8.2, 5.8, 6.6, 7.3, 7.~
+$ imdb_votes  <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+```
+
+There are 37 films that are PG-13 rate
+
+## 10. List a film that has runtime greater than 140 minutes.
+
+### 10.1 use filter() to filter a runtime that greater than 140 min, then use glimpse() to display
+```
+data %>% filter(runtime_min > 140) %>% glimpse()
+```
+
+```
+Rows: 15
+Columns: 19
+$ imdb_id     <chr> "tt0499549", "tt0416716", "tt2395427"~
+$ title       <chr> "Avatar", "Empire of Dreams: The Stor~
+$ plot        <chr> "A paraplegic Marine dispatched to th~
+$ type        <fct> movie, movie, movie, movie, movie, mo~
+$ rated       <chr> "PG-13", NA, "PG-13", "PG-13", "PG-13~
+$ year        <chr> "2009", "2004", "2015", "2019", "2016~
+$ released_at <chr> "18 Dec 2009", "20 Sep 2004", "01 May~
+$ added_at    <chr> "November 12, 2019", "November 12, 20~
+$ runtime_min <dbl> 162, 151, 141, 181, 147, 143, 149, 16~
+$ genre       <chr> "Action, Adventure, Fantasy, Sci-Fi",~
+$ director    <chr> "James Cameron", "Edith Becker, Kevin~
+$ writer      <chr> "James Cameron", "Ed Singer", "Joss W~
+$ actors      <chr> "Sam Worthington, Zoe Saldana, Sigour~
+$ language    <chr> "English, Spanish", "English", "Engli~
+$ country     <chr> "USA", "USA", "USA", "USA", "USA", "U~
+$ awards      <chr> "Won 3 Oscars. Another 86 wins & 129 ~
+$ metascore   <dbl> 83, NA, 66, 78, 75, 69, NA, 50, 53, 6~
+$ imdb_rating <dbl> 7.8, 8.3, 7.3, 8.4, 7.8, 8.0, 8.5, 7.~
+$ imdb_votes  <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, N~
+```
+
+There are 15 films that has runtime greater than 140 minutes.
+
 
 ## About Us
 งานนี้เป็นส่วนของวิชา INT214 Statistics for Information technology <br/> ภาคเรียนที่ 1 ปีการศึกษา 2564 คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี
