@@ -73,6 +73,34 @@ Result:
 ```
 Max reviews is 5938
 
+### 3.3 check type of the book that has more than 1000 pages in this Dataset
+```
+Com %>% filter(Number_Of_Pages > 1000) %>% select(Type,Number_Of_Pages)
+```
+
+Result:
+```
+        Type Number_Of_Pages
+1  Paperback            1200
+2  Paperback            1008
+3  Hardcover            1506
+4  Paperback            1214
+5  Hardcover            1040
+6  Hardcover            1142
+7  Hardcover            1180
+8  Hardcover            1052
+9  Hardcover            1056
+10 Paperback            1136
+11 Hardcover            1136
+12 Hardcover            1132
+13 Hardcover            1040
+14 Hardcover            1235
+15 Paperback            1040
+16 Hardcover            3168
+```
+Book types have Paperback,Hardcover then it has pages more than 1000 pages
+
+
 ## Part 4: Visualization with GGplot2
 ### 4.1 plot graph show relation between Price and Number of Pages
 ```
