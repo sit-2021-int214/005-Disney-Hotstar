@@ -16,9 +16,6 @@ Datasets from: [Disney+ Hotstar](https://www.kaggle.com/sanjanaalaham/disney-hot
 9. List a film that is rated at PG-13.
 10. List a film that has runtime greater than 140 minutes.
 
-
-## Result
-
 ## Our Steps
 
 ## 0. Import datasets and libraries.
