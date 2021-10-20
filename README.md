@@ -7,7 +7,14 @@ Datasets from: [Disney+ Hotstar](https://www.kaggle.com/sanjanaalaham/disney-hot
 0. Import datasets and libraries.
 1. Define a question
 2. Data Cleaning
-3. 
+3. List a film that is a episode
+4. Find average rumtime of movie
+5. Find a movies that is directed by Anthony Russo and Joe Russo
+6. Find total, max, min, average of metascore.
+7. Find total, max, min, average of imdb_vote.
+8. Find total, max, min, average of imdb rating.
+9. List a film that is rated at PG-13.
+10. List a film that has runtime greater than 140 minutes.
 
 
 ## Result
