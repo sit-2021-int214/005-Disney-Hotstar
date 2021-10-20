@@ -28,3 +28,16 @@ data$Type %>% as.factor() %>% glimpse()
 
 ## 3.5 
 data %>% filter(Price > 200) %>% glimpse()
+
+
+## 4
+
+## 4.1
+rating_plot <- ggplot(data,aes(x=Price,y=Rating)) + geom_point()
+rating_plot + ggtitle("Number of rating compared to price") + geom_point(aes(color = Type))
+
+
+## 4.2 
+
+review_plot <- data %>% filter(Reviews < 2000) %>% ggplot(aes(x=Price)) + geom_histogram(binwidth = 10, bins = 10)
+review_plot + ggtitle("Count of Price ") + ylab("Count")
