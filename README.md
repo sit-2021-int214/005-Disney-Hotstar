@@ -8,8 +8,8 @@ Datasets from: [Disney+ Hotstar](https://www.kaggle.com/sanjanaalaham/disney-hot
 
 ### Important Files in Repository
 
-- [disney_plus_shows.csv](./disney_plus_shows.csv): Original Dataset
-- [products_clean.csv](./products_original.csv): Clean Dataset
+- [disney_plus_beforeclean](./disney_plus_shows.csv): Original Dataset
+- [disney_plus_aftercleaned.csv](./Disney.csv): Clean Dataset
 
 ## Process
 0. Import datasets and libraries.
