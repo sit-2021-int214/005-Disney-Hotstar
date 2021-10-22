@@ -2,7 +2,6 @@
 
 **Created by Natasia Yusuwapan (ID: 63130500070)**
 
-
 :avocado:  Choose Dataset : Top 270 Computer Science / Programing Books (Data from Thomas Konstantin, [Kaggle](https://www.kaggle.com/thomaskonstantin/top-270-rated-computer-science-programing-books)) >> [Using CSV](https://raw.githubusercontent.com/safesit23/INT214-Statistics/main/datasets/prog_book.csv)
 
 
@@ -192,3 +191,8 @@ Embed Image by using this syntax in markdown file
 ````
 ![Name](imageFile)
 ````
+
+### :evergreen_tree: Instructor
+- ATCHARA TRAN-U-RAIKUL
+
+- JATAWAT XIE (Git: [safesit23](https://github.com/safesit23))
