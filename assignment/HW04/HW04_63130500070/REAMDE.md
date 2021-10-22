@@ -1,6 +1,6 @@
 # R-Assignment 4
 
-**Created by Natasia Yusuwaoan (ID: 63130500070)**
+**Created by Natasia Yusuwapan (ID: 63130500070)**
 
 
 :avocado:  Choose Dataset : Top 270 Computer Science / Programing Books (Data from Thomas Konstantin, [Kaggle](https://www.kaggle.com/thomaskonstantin/top-270-rated-computer-science-programing-books)) >> [Using CSV](https://raw.githubusercontent.com/safesit23/INT214-Statistics/main/datasets/prog_book.csv)
@@ -164,7 +164,18 @@ barplot(counts, main="Count of book each type",
 ```
 :fallen_leaf:Result
 
-![Graph 1](graph1.png)
+![Graph 1](4.1barplot.png)
+
+From the graph, it can be seen that the paperback format books are the most common and are in chronological order.
+
+### :seedling: 4.2 Graph shows  between Rating and Price  ?
+```
+dataset %>% ggplot(aes(x = Rating,y = Price,color=Rating))  + geom_point()
+```
+:fallen_leaf:Result
+
+![Graph 2](4.2geom_point.png)
+From the graph, shows the data between the price and the rating.
 
 **Guideline:
 Embed Image by using this syntax in markdown file
