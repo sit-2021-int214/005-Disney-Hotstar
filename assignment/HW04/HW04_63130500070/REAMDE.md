@@ -164,7 +164,7 @@ There are 11 the book that shows only Hardcover type and has  Number_Of_Pages mo
 
 
 ##  :evergreen_tree: Part 4: Visualization with GGplot2
-### :seedling: 4.1Graph shows how many each type books  ?
+### :seedling: 4.1Graph shows how many each type books  
 ```
 counts <- table(dataset$Type)
 barplot(counts, main="Count of book each type", 
@@ -176,7 +176,7 @@ barplot(counts, main="Count of book each type",
 
 From the graph, it can be seen that the paperback format books are the most common and are in chronological order.
 
-### :seedling: 4.2 Graph shows  between Rating and Price  ?
+### :seedling: 4.2 Graph shows  between Rating and Price  
 ```
 dataset %>% ggplot(aes(x = Rating,y = Price,color=Rating))  + geom_point()
 ```
