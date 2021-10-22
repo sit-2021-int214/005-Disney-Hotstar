@@ -101,6 +101,12 @@ min
 1  9.32
 ```
 
+The average price is 54.5
+
+The maximum price is 236
+
+The minimum price is 9.32
+
 
 ### :seedling: 3.4 List  the book that has type "ebook"  ?
 ```
@@ -118,6 +124,7 @@ dataset %>% filter(Type == "ebook")
 6   4.45      88 Deep Learni~ "An introduct~             787 ebook  83.2
 7   4.02       3 Practical F~ "Ebook is fre~             582 ebook  83.2
 ```
+There are 7 the book that has type "ebook" in this dataset.
 
 
 ### :seedling: 3.5 List the book has rating equal to 5  ?
@@ -131,6 +138,7 @@ dataset %>% duplicated() %>% table()
 1      5       0 Your First~ "A tutorial fo~             317 ebook  25.9
 
 ```
+There is 1 the book that has rating equal to 5 in this dataset.
 
 
 ### :seedling: 3.6 List the book shows only Hardcover type and has  Number_Of_Pages more than 1000 ?
@@ -153,6 +161,7 @@ dataset %>% filter(Type == "Hardcover" & Number_Of_Pages > 1000)
 10   4.26       5 Numerical R~ "Co-authored~            1235 Hard~ 176. 
 11   4.77       4 The Art of ~ "\"The bible~            3168 Hard~ 220.
 ```
+There are 11 the book that shows only Hardcover type and has  Number_Of_Pages more than 1000 .
 
 
 ##  :evergreen_tree: Part 4: Visualization with GGplot2
@@ -175,6 +184,7 @@ dataset %>% ggplot(aes(x = Rating,y = Price,color=Rating))  + geom_point()
 :fallen_leaf:Result
 
 ![Graph 2](4.2geom_point.png)
+
 From the graph, shows the data between the price and the rating.
 
 **Guideline:
