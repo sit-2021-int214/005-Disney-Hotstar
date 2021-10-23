@@ -42,7 +42,7 @@ starwars %>% select(name,height)
 
 ## Part 3: Transform data with dplyr and finding insight the data
 
-#3.1 Show the top 10 books according to the book rating.
+###3.1 Show the top 10 books according to the book rating.
 
 ```
 data  %>% select(Rating,Book_title,Price) %>% arrange(Rating) %>% head(10)
