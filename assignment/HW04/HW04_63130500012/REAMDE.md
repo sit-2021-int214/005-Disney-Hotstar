@@ -189,7 +189,17 @@ point
 ```
 Result:
 
-![Graph 1](![point](https://user-images.githubusercontent.com/68915257/138553901-b548fe73-4278-4505-ae31-2c1c59382220.png))
+![Graph 1](point.png)
+
+### 1.) Graph shows  between Price and Frequency
+```
+bar <- data %>% filter(Rating < 1000) %>% ggplot(aes(x=Price))+geom_histogram(binwidth = 10)+geom_bar()+ggtitle("COUNT OF PRICE")
+
+bar
+```
+Result:
+
+![Graph 1](bar.png)
 
 **Guideline:
 Embed Image by using this syntax in markdown file
