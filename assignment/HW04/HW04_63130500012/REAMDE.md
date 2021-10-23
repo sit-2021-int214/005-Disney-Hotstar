@@ -189,9 +189,9 @@ point
 ```
 Result:
 
-From the graph, shows the data between the price and the rating by choosing to show at a price that is greater than 50
-
 ![Graph 1](point.png)
+
+From the graph, shows the data between the price and the rating by choosing to show at a price that is greater than 50
 
 ### 1.) Graph shows  between Price and Frequency
 ```
