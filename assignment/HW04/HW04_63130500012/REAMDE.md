@@ -18,13 +18,16 @@ Choose Dataset:
 
 ```
 # Library
-library(name)
+library(dplyr)
+library(assertive)
+library(stringr)
+library(ggplot2)
 
 # Dataset
-dataset <- read_csv("")
+dataset <- read_csv("https://raw.githubusercontent.com/safesit23/INT214-Statistics/main/datasets/prog_book.csv")
 ```
 
-In this dataset has .....
+In this dataset has Top 270 Computer Science / Programing Books
 
 
 
