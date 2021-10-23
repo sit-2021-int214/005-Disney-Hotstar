@@ -42,16 +42,27 @@ starwars %>% select(name,height)
 
 ## Part 3: Transform data with dplyr and finding insight the data
 
-//Show the top 10 books according to the book rating.
+Show the top 10 books according to the book rating.
 
 ```
-#Code here
+#data  %>% select(Rating,Book_title,Price) %>% arrange(Rating) %>% head(10)
 ```
 
 Result:
 
 ```
-#Copy Result from console to here
+# Rating                                                                                                                           Book_title     Price
+1    3.00                                                                                  Advanced Game Programming: A Gamedev.Net Collection  59.08235
+2    3.00                                            Cross-Platform Game Programming (Game Development) (Charles River Media Game Development)  60.39118
+3    3.00                                                                              Lambda-Calculus, Combinators and Functional Programming  61.16765
+4    3.20                                                                                                        Game Programming Golden Rules  19.15294
+5    3.22                                                                                                                     Beginning Java 2  36.61765
+6    3.32                                                                                           Sams Teach Yourself JavaScript in 24 Hours  27.85000
+7    3.33                                                                                         Responsive Web Design Overview For Beginners  11.26765
+8    3.37                                                                                                       Unity Virtual Reality Projects  45.66471
+9    3.38                                                                                                 Sams Teach Yourself Perl in 24 Hours  38.23529
+10   3.45 3D Game Engine Design: A Practical Approach to Real-Time Computer Graphics (The Morgan Kaufmann Series in Interactive 3D Technology) 117.98824
+ 
 ```
 //Explain
 
