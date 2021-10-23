@@ -33,10 +33,10 @@ In this dataset has Top 270 Computer Science / Programing Books
 
 ## Part 2: Learning function from Tidyverse
 
-- Function `select()` from package [dplyr](https://dplyr.tidyverse.org/articles/dplyr.html#select-columns-with-select)). It using for select columns
+- Function `arrange() ` from package [dplyr](https://dplyr.tidyverse.org/articles/dplyr.html#select-columns-with-select)). It using to arrange the observation order.
 
 ```
-starwars %>% select(name,height)
+starwars %>% arrange() %>% glimpse()
 ```
 ** You can sepearate this part or combine in part of `Transform data with dplyr and finding insight the data`
 
