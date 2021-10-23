@@ -181,16 +181,15 @@ Most reviewed book titles is 5938 (book title is  Start with Why: How Great Lead
 
 
 ## Part 4: Visualization with GGplot2
-### 1.) Graph show relation between height and mass
+### 1.) Graph shows  between Rating and Price
 ```
-scat_plot <- starwars %>% filter(mass<500) %>% ggplot(aes(x=height,y=mass))+
-  geom_point(aes(color=gender))
+point <- data  %>% filter(Price >50)%>% ggplot(aes(x=Rating,y=Price))+geom_point(aes(color= Price ))+geom_smooth()
 
-scat_plot+geom_smooth()
+point
 ```
 Result:
 
-![Graph 1](graph1.png)
+![Graph 1](point.png)
 
 **Guideline:
 Embed Image by using this syntax in markdown file
