@@ -10,6 +10,7 @@ Datasets from: [Disney+ Hotstar](https://www.kaggle.com/sanjanaalaham/disney-hot
 
 - [disney_plus_beforeclean](./disney_plus_shows.csv): Original Dataset
 - [disney_plus_aftercleaned](./Disney.csv): Clean Dataset
+- [R-Script](./r_script.R): R-Script used in this assignment
 
 ## Process
 0. Import datasets and libraries.
