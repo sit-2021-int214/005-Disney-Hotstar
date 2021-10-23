@@ -189,7 +189,7 @@ point
 ```
 Result:
 
-![Graph 1](point.png)
+![Graph 1](![point](https://user-images.githubusercontent.com/68915257/138553901-b548fe73-4278-4505-ae31-2c1c59382220.png))
 
 **Guideline:
 Embed Image by using this syntax in markdown file
