@@ -13,8 +13,7 @@ install.packages("ggplot2")
 
 
 #2.1Show the top 10 books according to the book rating.
-
-#data  %>% select(Rating,Book_title,Price) %>% arrange(Rating) %>% head(10)
+data  %>% select(Rating,Book_title,Price) %>% arrange(Rating) %>% head(10)
 # Rating                                                                                                                           Book_title     Price
 #1    3.00                                                                                  Advanced Game Programming: A Gamedev.Net Collection  59.08235
 #2    3.00                                            Cross-Platform Game Programming (Game Development) (Charles River Media Game Development)  60.39118
@@ -43,8 +42,6 @@ data %>% filter(Rating>4.5 , Rating <5) %>% select(Book_title,Rating)
                                  
 
 #2.3 Average rating of all books
-#rating <-as.numeric(data$Rating)
-#rating %>% mean() #[1] 4.067417
 is.numeric(data$Rating)
 data %>% summarise(Average = mean(Rating)) # Average
                                             #1 4.067417
@@ -63,8 +60,8 @@ data %>% summarise(Average = mean(Price)) #    Average 54.54186
 
 #2.6 Displays information on Kindle Edition book types with prices over 20.
 data  %>% filter(data$Type == "Kindle Edition"& Price <20.0) %>% glimpse()
-Rows: 2
-Columns: 7
+#Rows: 2
+#Columns: 7
 #$ Rating          <dbl> 3.33, 4.06
 #$ Reviews         <chr> "0", "1,325"
 #$ Book_title      <chr> "Responsive Web Design Overview For Beginners", "How Google Works"
