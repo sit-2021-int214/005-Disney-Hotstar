@@ -44,6 +44,10 @@ Com %>% glimpse()
 ```
 tibble(x =0:10 , y = -(x^2) , z =x+y)
 ```
+Result:
+```
+สร้างตารางโดยที่กำหนดให้มีแกน x หรือ แถว ทั้งหมดคือ 0-10 และ แนวตั้งหรือคอลัมน์ คือ -(x^2) โดยที่ให้ค่า z หรือข้อมูลของแต่ละ rows คือ x+y
+```
 ** You can sepearate this part or combine in part of `Transform data with dplyr and finding insight the data`
 
 ## Part 3: Transform data with dplyr and finding insight the data
