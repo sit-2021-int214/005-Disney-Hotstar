@@ -12,10 +12,10 @@ Sample_SD <- sd(data_sample$data.imdb_rating,na.rm = TRUE)
 mue0 <- mean(data$data.imdb_rating,na.rm = TRUE)
 
 
-t <- (Sample_Mean-mue0)/(Sample_SD*(sqrt(n)));
+t <- (Sample_Mean-mue0)/(Sample_SD/(sqrt(n)));
 pt <- pt(t,n-1)
 
-if(pt <= alpha){
+if(pt < alpha){
   print("Reject H0")
 }else{
   print("Not reject H0")
